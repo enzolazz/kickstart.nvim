@@ -1,4 +1,4 @@
 return {
-  -- disable mini
-  { 'echasnovski/mini.nvim', enabled = false },
+  -- mini
+  --{ 'echasnovski/mini.nvim', enabled = false },
 }
