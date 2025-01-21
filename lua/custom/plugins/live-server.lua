@@ -1,13 +1,14 @@
 return {
   {
-    'barrett-ruth/live-server.nvim',
-    build = 'pnpm add -g live-server',
-    cmd = { 'LiveServerStart', 'LiveServerStop' },
+    'ngtuonghy/live-server-nvim',
+    event = 'VeryLazy',
+    build = ':LiveServerInstall',
     config = function()
-      require('live-server').setup {
-        args = { '--port=7000', '--browser=zen-browser' },
+      require('live-server-nvim').setup {
+        custom = { '--port=8080' },
+        serverPath = vim.fn.stdpath 'data' .. '/live-server/', --default
+        open = 'folder', -- folder|cwd     --default
       }
     end,
-    opts = {},
   },
 }
